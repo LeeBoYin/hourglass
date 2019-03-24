@@ -11,9 +11,20 @@
   <action id="EditorDuplicate" />
   <action id="FileChooser.GotoDesktop" />
   <action id="FileChooser.TogglePathShowing" />
+  <action id="FindNext" />
+  <action id="GotoClass" />
   <action id="GotoDeclaration">
     <keyboard-shortcut first-keystroke="meta b" />
     <mouse-shortcut keystroke="button2" />
+  </action>
+  <action id="GotoFile">
+    <keyboard-shortcut first-keystroke="meta p" />
+  </action>
+  <action id="GotoLine">
+    <keyboard-shortcut first-keystroke="meta g" />
+  </action>
+  <action id="GotoSymbol">
+    <keyboard-shortcut first-keystroke="meta r" />
   </action>
   <action id="MoveLineDown">
     <keyboard-shortcut first-keystroke="meta down" />
@@ -22,23 +33,26 @@
     <keyboard-shortcut first-keystroke="meta up" />
   </action>
   <action id="ParameterInfo" />
+  <action id="Refresh" />
+  <action id="Replace" />
+  <action id="Rerun" />
   <action id="RunDashboard.CopyConfiguration" />
   <action id="SelectNextOccurrence">
     <keyboard-shortcut first-keystroke="meta d" />
   </action>
   <action id="SendEOF" />
-  <action id="ShowFilePath">
-    <keyboard-shortcut first-keystroke="meta p" />
-  </action>
+  <action id="ShowFilePath" />
   <action id="ShowNavBar">
     <keyboard-shortcut first-keystroke="alt home" />
   </action>
   <action id="Vcs.EditSource">
     <keyboard-shortcut first-keystroke="f4" />
   </action>
+  <action id="Vcs.Log.Refresh" />
   <action id="XDebugger.CopyWatch" />
   <action id="XDebugger.JumpToSource">
     <keyboard-shortcut first-keystroke="f4" />
   </action>
+  <action id="hg4idea.QRefresh" />
   <action id="openAssertEqualsDiff" />
 </keymap>
