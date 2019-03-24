@@ -1,0 +1,8 @@
+<application>
+  <component name="DefaultFont">
+    <option name="FONT_SIZE" value="18" />
+  </component>
+  <component name="EditorSettings">
+    <option name="IS_MOUSE_CLICK_SELECTION_HONORS_CAMEL_WORDS" value="false" />
+  </component>
+</application>
