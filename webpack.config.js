@@ -1,32 +1,32 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
 	entry: {
 		app: './src/app.js',
-		util: './src/util.js',
+		// util: './src/util.js',
 	},
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist')
 	},
-	// know exactly which source file the error came from
-	devtool: 'inline-source-map',
 	devServer: {
-		contentBase: './dist'
+		hot: true,
+		open: false,
+		host: '0.0.0.0',
+		port: 3000,
 	},
 	plugins: [
-		new VueLoaderPlugin(),
 		// clean the /dist folder before each build
-		// new CleanWebpackPlugin(),
+		new CleanWebpackPlugin(),
 		// Plugin that simplifies creation of HTML files to serve your bundles
-		// https://webpack.js.org/guides/output-management/#setting-up-htmlwebpackplugin
-		// new HtmlWebpackPlugin({
-		// 	title: 'Hourglass'
-		// })
+		new HtmlWebpackPlugin({
+			template: './src/index.html',
+		}),
+		new VueLoaderPlugin(),
 	],
 	module: {
 		rules: [
