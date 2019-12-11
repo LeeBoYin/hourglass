@@ -99,6 +99,10 @@
 			},
 		},
 		watch: {
+			capacitySecond() {
+				this.reset();
+				localStorage && localStorage.setItem('capacity', this.capacitySecond.toString());
+			},
 			remainSecond() {
 				if(this.remainSecond <= 0) {
 					this.stop();
@@ -110,15 +114,8 @@
 			},
 		},
 		created() {
-			if(localStorage) {
-				if(localStorage.getItem('capacity')) {
-					this.capacitySecond = +localStorage.getItem('capacity');
-				}
-				if(localStorage.getItem('theme')) {
-					this.theme = localStorage.getItem('theme');
-				}
-			}
-			this.reset();
+			this.loadStorage();
+			this.loadUrlParams();
 			this.bindKeyboard();
 		},
 		methods: {
@@ -169,6 +166,31 @@
 				this.settingSecond = this.capacitySecond;
 				this.hideSettings();
 			},
+			loadStorage() {
+				if(!localStorage) {
+					return;
+				}
+				if(localStorage.getItem('capacity')) {
+					this.capacitySecond = +localStorage.getItem('capacity');
+				}
+				if(localStorage.getItem('theme')) {
+					this.theme = localStorage.getItem('theme');
+				}
+			},
+			loadUrlParams() {
+				const urlParams = new URLSearchParams(window.location.search);
+				const capacity = urlParams.get('c');
+				if(capacity) {
+					this.capacitySecond = capacity;
+				}
+				const run = urlParams.get('r');
+				if(run) {
+					this.$nextTick(() => {
+						this.run();
+					});
+				}
+				window.history.replaceState(null, '', window.location.origin);
+			},
 			bindKeyboard() {
 				window.onkeydown = (e) => {
 					if(this.isShowSettings) {
@@ -218,8 +240,6 @@
 				// set new capacity
 				if(this.capacitySecond !== newCapacity) {
 					this.capacitySecond = newCapacity;
-					this.reset();
-					localStorage && localStorage.setItem('capacity', this.capacitySecond);
 				}
 
 				document.getElementById('capacity').blur();
