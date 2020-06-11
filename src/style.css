@@ -18,6 +18,10 @@
 	--sand: #2E4D59;
 }
 
+html, body {
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	font-family: monospace;
@@ -29,11 +33,11 @@ body {
 }
 
 #container {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
 	padding: 5vh;
 	overflow: hidden;
 	position: relative;
