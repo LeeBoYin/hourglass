@@ -1,7 +1,8 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -25,7 +26,12 @@ module.exports = {
 		// Plugin that simplifies creation of HTML files to serve your bundles
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
+			favicon: './static/favicon.ico',
 		}),
+		new CopyPlugin([
+			{ from: 'static', to: 'static' },
+			{ from: 'robots.txt', to: 'robots.txt' },
+		]),
 		new VueLoaderPlugin(),
 	],
 	module: {
