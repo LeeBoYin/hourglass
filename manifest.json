@@ -1,0 +1,58 @@
+{
+  "short_name": "Hourglass",
+  "name": "Hourglass",
+  "description": "Hourglass Timer App",
+  "icons": [
+    {
+      "src": "/static/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/static/icons/80.png",
+      "type": "image/png",
+      "sizes": "80x80"
+    },
+    {
+      "src": "/static/icons/100.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "/static/icons/120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/static/icons/128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/static/icons/152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/static/icons/167.png",
+      "type": "image/png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "/static/icons/180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/static/icons/196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#F29376",
+  "background_color": "#F29376",
+  "display": "standalone",
+  "scope": "/",
+  "orientation": "portrait"
+}

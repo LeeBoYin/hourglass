@@ -2,8 +2,40 @@
 <head>
 	<title>Hourglass</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- PWA -->
+	<link rel="manifest" href="manifest.json" />
+	<meta name="theme-color" content="#F29376"/>
+
+	<!-- android PWA -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="hourglass">
+	<link rel="icon" sizes="128x128" href="/static/icons/128.png">
+	<link rel="icon" sizes="196x196" href="/static/icons/196.png">
+
+	<!-- iOS PWA -->
+	<meta name="apple-mobile-web-app-title" content="hourglass">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="/static/icons/icon-default.png">
+	<link rel="apple-touch-icon" href="/static/icons/80.png" sizes="80x80">
+	<link rel="apple-touch-icon" href="/static/icons/100.png" sizes="100x100">
+	<link rel="apple-touch-icon" href="/static/icons/152.png" sizes="152x152"> <!-- ipad -->
+	<link rel="apple-touch-icon" href="/static/icons/167.png" sizes="167x167"> <!-- ipad retina -->
+	<link rel="apple-touch-icon" href="/static/icons/180.png" sizes="180x180"> <!-- iphone retina -->
+	<link href="/static/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="/static/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="/static/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+	<link href="/static/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+	<link href="/static/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="/static/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+	<link href="/static/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="/static/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="/static/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="/static/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 </head>
 <body>
-<div id="app"></div>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<div id="app"></div>
 </body>
 </html>

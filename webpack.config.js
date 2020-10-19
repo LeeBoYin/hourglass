@@ -1,7 +1,9 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -27,6 +29,13 @@ module.exports = {
 			template: './src/index.html',
 		}),
 		new VueLoaderPlugin(),
+		new CopyPlugin([
+			{ from: 'static', to: 'static' },
+			{ from: 'manifest.json', to: 'manifest.json' },
+		]),
+		new ServiceWorkerWebpackPlugin({
+			entry: path.join(__dirname, 'src/serviceWorker.js'),
+		}),
 	],
 	module: {
 		rules: [
