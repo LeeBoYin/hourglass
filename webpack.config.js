@@ -29,13 +29,10 @@ module.exports = {
 			template: './src/index.html',
 			favicon: './static/favicon.ico',
 		}),
-		new CopyPlugin([
-			{ from: 'static', to: 'static' },
-			{ from: 'robots.txt', to: 'robots.txt' },
-		]),
 		new VueLoaderPlugin(),
 		new CopyPlugin([
 			{ from: 'static', to: 'static' },
+			{ from: 'robots.txt', to: 'robots.txt' },
 			{ from: 'manifest.json', to: 'manifest.json' },
 		]),
 		new ServiceWorkerWebpackPlugin({
