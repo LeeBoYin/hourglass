@@ -1,5 +1,10 @@
 <code_scheme name="Default" version="173">
-  <JSCodeStyleSettings>
+  <option name="OTHER_INDENT_OPTIONS">
+    <value>
+      <option name="USE_TAB_CHARACTER" value="true" />
+    </value>
+  </option>
+  <JSCodeStyleSettings version="0">
     <option name="USE_DOUBLE_QUOTES" value="false" />
     <option name="FORCE_QUOTE_STYlE" value="true" />
     <option name="ENFORCE_TRAILING_COMMA" value="Remove" />
@@ -8,7 +13,7 @@
     <option name="INDENT_CHAINED_CALLS" value="false" />
     <option name="SPACES_WITHIN_INTERPOLATION_EXPRESSIONS" value="true" />
   </JSCodeStyleSettings>
-  <TypeScriptCodeStyleSettings>
+  <TypeScriptCodeStyleSettings version="0">
     <option name="USE_DOUBLE_QUOTES" value="false" />
     <option name="FORCE_QUOTE_STYlE" value="true" />
     <option name="ENFORCE_TRAILING_COMMA" value="Remove" />
@@ -18,6 +23,7 @@
   </TypeScriptCodeStyleSettings>
   <codeStyleSettings language="CSS">
     <indentOptions>
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
       <option name="USE_TAB_CHARACTER" value="true" />
     </indentOptions>
   </codeStyleSettings>
@@ -28,6 +34,7 @@
   </codeStyleSettings>
   <codeStyleSettings language="HTML">
     <indentOptions>
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
       <option name="USE_TAB_CHARACTER" value="true" />
     </indentOptions>
   </codeStyleSettings>
@@ -38,16 +45,21 @@
     </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="JavaScript">
-    <option name="SPACE_WITHIN_PARENTHESES" value="true" />
-    <option name="SPACE_WITHIN_METHOD_CALL_PARENTHESES" value="true" />
-    <option name="SPACE_WITHIN_METHOD_PARENTHESES" value="true" />
-    <option name="SPACE_WITHIN_IF_PARENTHESES" value="true" />
-    <option name="SPACE_WITHIN_WHILE_PARENTHESES" value="true" />
-    <option name="SPACE_WITHIN_FOR_PARENTHESES" value="true" />
-    <option name="SPACE_WITHIN_CATCH_PARENTHESES" value="true" />
-    <option name="SPACE_WITHIN_SWITCH_PARENTHESES" value="true" />
-    <option name="SPACE_WITHIN_BRACKETS" value="true" />
     <indentOptions>
+      <option name="USE_TAB_CHARACTER" value="true" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="SASS">
+    <indentOptions>
+      <option name="INDENT_SIZE" value="4" />
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      <option name="USE_TAB_CHARACTER" value="true" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="SCSS">
+    <indentOptions>
+      <option name="INDENT_SIZE" value="4" />
+      <option name="CONTINUATION_INDENT_SIZE" value="4" />
       <option name="USE_TAB_CHARACTER" value="true" />
     </indentOptions>
   </codeStyleSettings>

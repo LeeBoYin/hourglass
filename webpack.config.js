@@ -27,7 +27,12 @@ module.exports = {
 		// Plugin that simplifies creation of HTML files to serve your bundles
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
+			favicon: './static/favicon.ico',
 		}),
+		new CopyPlugin([
+			{ from: 'static', to: 'static' },
+			{ from: 'robots.txt', to: 'robots.txt' },
+		]),
 		new VueLoaderPlugin(),
 		new CopyPlugin([
 			{ from: 'static', to: 'static' },
