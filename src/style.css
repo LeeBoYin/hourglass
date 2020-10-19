@@ -177,6 +177,7 @@ body {
 }
 
 .remain-time {
+	cursor: pointer;
 	margin: 0px;
 	font-size: 5vh;
 	color: var(--text-color);
